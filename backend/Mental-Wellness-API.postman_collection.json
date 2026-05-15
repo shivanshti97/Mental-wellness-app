@@ -1,0 +1,110 @@
+{
+  "info": {
+    "name": "Mental Wellness API",
+    "description": "API collection for testing MongoDB integration",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Document",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"My First Document\",\n  \"description\": \"This is a test document for my MongoDB collection\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "add"]
+        },
+        "description": "Add a new document to your personal collection"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Documents",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "all"]
+        },
+        "description": "Fetch all documents from your collection"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Document by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "REPLACE_WITH_ACTUAL_ID"
+            }
+          ]
+        },
+        "description": "Get a single document by its ID"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Document",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "REPLACE_WITH_ACTUAL_ID"
+            }
+          ]
+        },
+        "description": "Delete a document by its ID"
+      },
+      "response": []
+    },
+    {
+      "name": "Server Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": [""]
+        },
+        "description": "Get server information and available endpoints"
+      },
+      "response": []
+    }
+  ]
+}
